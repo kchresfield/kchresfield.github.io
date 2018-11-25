@@ -1,10 +1,12 @@
 /* ASSIGNMENT OPERATORS
 Operators assign from right to left using an equal sign '='. In conjunction
-with arithemetic operators, a value can be reassigned while an arithmetic
-compputation is preformed.
+with arithemetic operators, a value can be assigned while an arithmetic
+computation is preformed.
 */
 // Example //
-var a = 0 // The value of 0 is now assigned to the variable a. 
+var a = 0;   // The value of 0 is now assigned to the variable a.
+var b;
+b += 2;  // The value of 2 is added and assigned to variable b.
 
 /* ARITHMETIC OPERATORS
 Arithmetic operators include any mathmatical computations done in basic math.
@@ -21,7 +23,7 @@ ________            _______________________
 */
 
 /* COMPARISON OPERATORS
-Comparison operators compar contents to see if the content and the type of 
+Comparison operators compare contents to see if the content and the type of 
 content match (depending on the comparison operator). If the abstract comparison
 is used (==), it is testing to see if the content or value is the same.
 If the strict comparison Is used (===), it is comparing the content and if data
@@ -56,14 +58,25 @@ Only work with one value at a time.
 
 Operator            Function
 ________            ________
-!                   Negates a variable or value.
-typeOf()            Returns the type of datatype inclosed.
+!                   Logical not operator, changes a truthy value to a falsy value
+typeof()            Returns the type of datatype inclosed.
 -                   Negates numbers and strings.
 +                   Converts non-numbers to a number.
 */
+// Example //
+var word = 'banana';
+console.log(typeof(word)); //Logs 'string' to the console.
+
 
 /* TERNARY OPERATORS
 Can be used in place of if-else statements and written on one line. The format 
 for ternary operations is:
 {(A condition) ? "(statement if condtion is true)" : "statement if false" }
 */
+
+// Example //
+function pet(animal) {
+  return (animal ? 'dog' : 'fish');
+}
+
+console.log(pet(false));           //'fish' is logged to the console.

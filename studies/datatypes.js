@@ -23,21 +23,22 @@ conjunction with control flow. If a condition is met (true or false), then
 another set of code will execute.
 */
 // Example //
-var x = 0    // Returns false
-var x = -2   // Returns true
-/* if (var x= -2){
-    return "Its a number" 
+console.log(Boolean(0));    // Returns false
+console.log(Boolean(1));    // Returns true
+var x = -2;
+if (x === -2){
+    return "Its a number" ;
 }else{
-    return "Its not a number"  /*Returns a statement as a result of the code 
-                                 being true or false */
+    return "Its not a number";      //Returns a statement as a result of the code 
+    }                               //being true or false 
 
 
 /* ARRAYS
-Arrays are a collection of stored information.The information is stored between
-two square brackets. The information stored is seperated by a comma and each 
-item has a number index assigned to it, depending on its order in the array. An
-array's index begins at zero. Similarly, to access that information, one needs
-its assigned index number.
+Arrays are a complex data type that contain a  collection of values. The values
+are between two square brackets. The information stored is seperated by a comma 
+and each item has a number index assigned to it, depending on its order in the 
+array. An array's index begins at zero. Similarly, to access that information, 
+one needs its assigned index number.
 */
 // Example //
 var a= [1,2,3,4,5];
@@ -46,7 +47,7 @@ var a= [1,2,3,4,5];
 /* OBJECTS
 Objects are similar to arrays, however their information is accessed by keys,
 which are formatted as string. Each key has an assosiated property that can have
-the form of a string, number, or boolean value. The key- value properties are
+the form of a simple or a complex data type. The key- value properties are
 stored between two curley brackets, {} .
 */
 // Example //
@@ -57,10 +58,10 @@ var b = {
 }; 
 
 /* FUNCTIONS
-Functions are made of names, parameters, and arguements. Each function has a
-name in which it can be called, parameters which tell the function how to run,
-and an argument that is ran through the function and tested in the function 
-body. If a condition is met, a return statement is outputted.
+Functions are made of names, parameters, a return statement and arguements. 
+Each function has a name in which it can be called, parameters which tell the
+function how to run, and an argument that is ran through the function and 
+tested in the function body. The return value determines the value the function returns
 */
 // Example //
 /* function name(argument){
@@ -79,22 +80,22 @@ var d;     // Variable d has a value of undefined.
 
 /* NULL 
 Similar to undefined, null represents a valuse that has neither a value, nor
-has not been defined.
+has not been defined. */
 
 // Example //
-e;
-console.log(e) //Returns a null.
-*/
+var e = null;
+console.log(e); //Returns a null.
+
 
 /* NaN
 NaN stands for 'Not-a-Number'. If an arithmatic function is used with a value
 that is not a number, NaN will be returned.
 */
 // Example //
-/*
+
 var f = fish * 2;
 console.log(f); // Will return a NaN statement
-*/
+
 
 /* INFINITY and -INFINITY
 The value of ∞ is represented as 'Infinity', with a capital I. Likewise, -∞ is 
@@ -120,6 +121,5 @@ console.log(g);          // Returns 'how are you', not 'how are you?'
 
 var h= ['how are you'];
 h.push('?');
-h.join('')
-console.log(h);          // Returns ['how are you?']
+console.log(h.join(''));          // Returns ['how are you?']
 

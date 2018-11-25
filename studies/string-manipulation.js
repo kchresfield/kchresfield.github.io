@@ -19,8 +19,9 @@ ____        ____________________________
 /* WITH STRING METHODS
 When a string is assigned to a variable, string methods (preforming certain
 duties) will change the value of a string. Since strings are an immutable value,
-the original variable is not changed. The methods are already uploaded onto
-JavaScripts' server and do not need to be declared. Some methods include:
+the original variable is not changed. The methods are constructs of the 
+underlying javascript language and do not need to be declared. Some methods 
+include:
 
 Method                   Output
 ______________          _______________________________________________________

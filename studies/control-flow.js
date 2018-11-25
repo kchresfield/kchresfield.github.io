@@ -1,13 +1,15 @@
 /* IF STATEMENT
 If statements are the start to any conditional code. The rest of the code will
 be based off the condition and weather it is true or not. Following the If 
-statement are the curley brackets {} which will contain the body of the code.
+statement are the parenthesis brackets () which will contain the body of the code.
 */
 
 /* ELSE-IF
 Else if statements are additional conditional blocks of code written after the
-if statement. Following the else if statement is a condition between two 
-paranthesis and a block of code that executes if the condition is true.
+if statement if the if statement's condition is false. However if the if 
+statement is ture, the else-if block is not reached Following the else if 
+statement is a condition between two paranthesis and a block of code that 
+executes if the condition is true.
 */
 
 /* ELSE
@@ -34,9 +36,12 @@ being evaluated. Following in the code body, incased in two curley brackets {},
 are the cases. The case will test the expression's value. If the case clause
 matches the expression's value, the code associated with that case will be
 executed. After each case a break statement is written, preventing the code from
-continually running when a case clause is met. If not, the next case will be 
-evaluated. Similar to an else statement, switch statements have a defualt
-statement that acts as a catch-all if none of the case clauses are met.
+continually running when a true case clause is met. Without a break statement, 
+even when a true condition is met, the switch statement will continue to run 
+and possibly return other results that do not pertain to the correct result. If 
+the case value is not met, the next case will be evaluated. Similar to an else 
+statement, switch statements have a defualt statement that acts as a catch-all
+if none of the case clauses are met.
 */
 // Example //
 var b = 'Sunny'
