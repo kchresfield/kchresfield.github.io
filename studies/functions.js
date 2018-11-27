@@ -2,6 +2,8 @@
 First a function must be declared/ defined, next the function must be called 
 somewhere in the code.
 */
+// Example //
+
  function exampleFunc(parameter){
      return parameter *2;
  }
@@ -24,6 +26,8 @@ firstFunction('argument1', 'argument2');     //Calling the function
 
 
 /* SYNTAX FOR A NAMED FUNCTION
+// Example //
+
 var firstFunction = function(parameterA , parameterB, parameterC){
     return parameterA + parameterB + parameterC;
 }
@@ -62,7 +66,7 @@ global scope.
 // Example //
 function scopeFunctionExample(){
     var color = 'blue';
-    console.log(type);              //Will log an error message because type cannot be reached in the local scope.
+//  console.log(type);              //Will log an error message because type cannot be reached in the local scope.
         function typeOfColor(){
             let type = 'light';
             console.log(color);     // Will log 'blue'

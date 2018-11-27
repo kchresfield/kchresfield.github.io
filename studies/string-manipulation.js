@@ -15,6 +15,16 @@ ____        ____________________________
 \b          Backspace
 \f          Form feed
 */
+// Example //
+
+var myName = 'My name is:\n\t Kaelyn\n and I am from:\n\t New York';
+console.log(myName);
+/* Logs this to the console:
+My name is:
+	 Kaelyn
+and I am from:
+	 New York
+*/
 
 /* WITH STRING METHODS
 When a string is assigned to a variable, string methods (preforming certain
@@ -30,3 +40,8 @@ ______________          _______________________________________________________
 .toLowerCase()          Converts all uppercase letter in a string to lower case.
 .toString()             Returns the valuse of a given string.
 */
+// Example //
+
+var name = 'KAELYN';
+console.log(name.toLowerCase()); // Will log 'kaelyn' to the console.
+console.log(name.slice(1));      // Will log 'AELYN' to the console.

@@ -14,7 +14,7 @@ are needed in a string, this can be accomplished by including a backslash to
 escape the string.
 */
 // Example //
-var x= "Tommy said \" Stop Talking. \" "; 
+var y = "Tommy said \" Stop Talking. \" "; 
 // Variable x has a value of, Tommy said "Stop Talking."
 
 /* BOOLEANS
@@ -25,11 +25,11 @@ another set of code will execute.
 // Example //
 console.log(Boolean(0));    // Returns false
 console.log(Boolean(1));    // Returns true
-var x = -2;
-if (x === -2){
-    return "Its a number" ;
+var z = -2;
+if (z === -2){
+    console.log("Its a number") ;
 }else{
-    return "Its not a number";      //Returns a statement as a result of the code 
+    console.log("Its not a number");      //Returns a statement as a result of the code 
     }                               //being true or false 
 
 
@@ -41,8 +41,8 @@ array. An array's index begins at zero. Similarly, to access that information,
 one needs its assigned index number.
 */
 // Example //
-var a= [1,2,3,4,5];
-//     [0,1,2,3,4]  are the array's index numbers, respectively. //
+ var a = [1,2,3,4,5];
+//       [0,1,2,3,4]  are the array's index numbers, respectively. //
 
 /* OBJECTS
 Objects are similar to arrays, however their information is accessed by keys,
@@ -83,16 +83,16 @@ Similar to undefined, null represents a valuse that has neither a value, nor
 has not been defined. */
 
 // Example //
-var e = null;
-console.log(e); //Returns a null.
-
+var data = {name:'Chester', species: 'Dog', age:'Human: 12, Dog: 84'};
+data = null;
+console.log(data); //null is logged to the console.
 
 /* NaN
 NaN stands for 'Not-a-Number'. If an arithmatic function is used with a value
 that is not a number, NaN will be returned.
 */
 // Example //
-
+var fish = 'fish';
 var f = fish * 2;
 console.log(f); // Will return a NaN statement
 

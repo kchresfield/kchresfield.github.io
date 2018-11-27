@@ -113,22 +113,53 @@ var friendsCount = function(customers, name){
 
 
 var topThreeTags = function(customers) {
-    
-};
+    var arrOfTags = _.map(customers, function(value) {
+        return value.tags;
+    });  
+    arrOfTags = arrOfTags.reduce(function(seed, element, index) {
+        return seed.concat(element);
+    }, []);
 
-var findHighestTag = function(counters) {
- var highestIndex = 0;
-        var highest = counters.reduce(function(highestTag, tagCounter, index) {
-            if (tagCounter.count > highestTag.count) {
+    var counters = [];
+    var highestTagList = [];
+    
+      
+    _.each(arrOfTags, function(tag, index, collection) {
+        var counterForTags = counters.filter(function(element, index, collection) {
+            return element.tag === tag;
+        });
+        if (counterForTags.length > 0) {
+            counterForTags[0].count++;
+        } else {
+            counters.push({ tag: tag, count: 1 });
+        }
+    });
+
+    function findHighestTag(counters) {
+        var highestIndex = 0;
+        var highest = counters.reduce(function(highestTag, counterForTags, index) {
+            if (counterForTags.count > highestTag.count) {
                 highestIndex = index;
-                return tagCounter;
+                return counterForTags;
             } else {
                 return highestTag;
             }          
         });
         counters.splice(highestIndex, 1);
         return highest;
-    };
+    }
+    
+    var highest = findHighestTag(counters);
+    highestTagList.push(highest.tag);
+    
+    highest = findHighestTag(counters);
+    highestTagList.push(highest.tag);
+    
+    highest = findHighestTag(counters);
+    highestTagList.push(highest.tag);
+    
+    return highestTagList;
+};
     
 
 var genderCount= function(array){
