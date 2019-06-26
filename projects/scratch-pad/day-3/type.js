@@ -14,8 +14,8 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    return (Array.isArray(value));
-   
+    
+   return Array.isArray(value);
     
     
     // YOUR CODE ABOVE HERE //
@@ -31,8 +31,8 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
     return (Object.prototype.toString.call(value)) === '[object Object]';
+    
     
     
     // YOUR CODE ABOVE HERE //
@@ -46,12 +46,12 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
-    if (Object.prototype.toString.call(value) === '[object Object]' || Array.isArray(value)===true){
+    if(isArray(value) === true || isObject(value) === true){
         return true;
-    }else{
+    } else{
         return false;
     }
+    
     
     
     // YOUR CODE ABOVE HERE //
@@ -61,15 +61,15 @@ function isCollection(value) {
  * Given an input value, return the type of the value as a String
  * 
  * Types are one of: 
- *    - "string"
- *    - "array"
- *    - "object"
- *    - "undefined"
- *    - "number"
+ *    - "string" -> typeOf()
+ *    - "array" -> Array.isArray()
+ *    - "object" -> Object.prototype.toString.call(value)
+ *    - "undefined" -> typeOf()
+ *    - "number" 
  *    - "boolean"
- *    - "null"
+ *    - "null" -> Object.prototype.toString.call(value)
  *    - "function"
- *    - "date"
+ *    - "date" -> Object.prototype.toString.call(value)
  * 
  * Examples:
  *    typeOf(134) -> "number"
@@ -78,9 +78,7 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    if (Object.prototype.toString.call(value) === '[object Null]'){
+     if (Object.prototype.toString.call(value) === '[object Null]'){
         return 'null';
     }else if (Object.prototype.toString.call(value) === '[object Array]'){
         return 'array';
@@ -93,6 +91,7 @@ function typeOf(value) {
     }else{
         return typeof(value);
     }
+    
     
     
     

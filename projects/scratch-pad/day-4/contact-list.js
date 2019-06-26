@@ -41,7 +41,8 @@ function makeContact(id, nameFirst, nameLast) {
         id: id, 
         nameFirst: nameFirst,
         nameLast: nameLast
-    }; return obj;
+    }; 
+    return obj;
 } 
 
 /* b. Create a factory Function called makeContactList that returns an Object 
@@ -96,6 +97,8 @@ function makeContactList() {
             return result;
         }
     };
+        
+        
 }
 
 

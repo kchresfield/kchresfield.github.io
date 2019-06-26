@@ -80,11 +80,27 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    var result = [];
-        for (var i = 0 ; i < strings.length ; i++ ){
-            result.push(modify(strings[i]));
-        }
-        return result;
+  // I: array of strings, function
+  // O: array of string
+  // E: We want the function to modify the string in the array
+  
+  // Function takes parameters and is called with arguments
+  // To call modify function, we need to pass in the arguments
+  // modify(argument1, argument2 )
+  
+  let resultArray = [];
+  
+  for(let i = 0; i < strings.length; i++){
+      console.log(strings[i]);
+      console.log(modify(strings[i]));
+      resultArray.push(modify(strings[i]))
+  }
+  
+   return resultArray;
+  
+  
+  
+  
     // YOUR CODE ABOVE HERE //
 }
 

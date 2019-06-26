@@ -25,8 +25,8 @@ function range(start, end, increment=1){
       rangeList.push(i);
     }
   }
-    else (increment <0);
-    for (let i=end; i>= start; i -= increment)
+    // else (increment <0);
+    // for (let i=end; i>= start; i -= increment)
   return rangeList;
 }
 
